@@ -16,7 +16,9 @@ use App\Http\Controllers\PublicPostController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
+Route::get('/', function () {
+    return response()->json(['message' => 'Welcome to the API'], 200);
+});
 Route::post('login', [AuthController::class, 'login']);
 Route::post('logout', [AuthController::class, 'logout']);
 // 認証が必要なルート

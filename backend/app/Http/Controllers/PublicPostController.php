@@ -22,7 +22,7 @@ class PublicPostController extends Controller
                 'date' => $post->date,
                 'title' => $post->title,
                 'content' => $post->content,
-                'flyer_image' => $post->flyer_image ? asset('storage/' . $post->flyer_image) : null, // 画像のフルURLを生成
+                'flyer_image' => $post->flyer_image, 
                 'location_name' => $post->location->name ?? '不明な場所', // 関連する場所名
             ];
         });
